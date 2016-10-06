@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/m_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentRight="true">
+
+        <ToggleButton
+            android:id="@+id/change_cam"
+            android:disabledAlpha="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="前摄像头"
+            android:textOn="后摄像头"
+            android:checked="false"/>
+
+        <Button
+            android:id="@+id/spotlight_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="闪光灯模式"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/take_pic_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍照"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+</RelativeLayout>
